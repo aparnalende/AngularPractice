@@ -1,5 +1,5 @@
 <!-- <p>contactform works!</p> -->
-<h2><u>Enter Contact Details:</u></h2>
+<h2 style="color: firebrick;"><u>Enter Contact Details:</u></h2>
 <form #contactForm="ngForm" (ngSubmit)="contactFormMethod(contactForm.value)" class="row gy-2 gx-3 align-items-center" style="margin-left: 30px;margin-right: 30px;">
   <div class="col-md-6">
     <label for="firstName">First Name:</label>
@@ -59,4 +59,3 @@
 <pre>
     {{ value | json }}
 </pre>
-<h2>Angular forms</h2>
