@@ -1,0 +1,12 @@
+form{ 
+    width: 300px;
+    margin:auto;
+}
+.valid-style {
+    border: 2px solid green;
+    box-shadow: 2px 2px 3px green;
+}
+.invalid-style {
+    border:2px solid red;
+    box-shadow: 2px 2px 3px red;
+}
