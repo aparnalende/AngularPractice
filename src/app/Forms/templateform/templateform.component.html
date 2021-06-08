@@ -1,0 +1,42 @@
+<p>templateform works!</p>
+<div class="container">
+  <form #frmRegister="ngForm" (submit)="submitClick(frmRegister.value)">
+    <dl>
+      <dt>Name</dt>
+      <dd>
+        <input type="text" name="uname" #userName="ngModel" ngModel required />
+      </dd>
+      <dt>Email</dt>
+      <dd>
+        <input
+          type="email"
+          name="email"
+          #userEmail="ngModel"
+          ngModel
+          required
+        />
+      </dd>
+      <dt>City</dt>
+      <dd>
+        <select name="city" #city="ngModel" ngModel>
+          <option>Pune</option>
+          <option>Mumbai</option>
+          <option>Nashik</option>
+          <option>Delhi</option>
+        </select>
+      </dd>
+    </dl>
+    <br />
+    <button>Submit</button>
+  </form>
+  <br />
+  <h3>User Details</h3>
+  <dl>
+    <dt>Name</dt>
+    <dd>{{ userName.value }}</dd>
+    <dt>Email</dt>
+    <dd>{{ userEmail.value }}</dd>
+    <dt>City</dt>
+    <dd>{{ city.value }}</dd>
+  </dl>
+</div>

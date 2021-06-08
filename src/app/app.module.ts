@@ -25,6 +25,7 @@ import { ChildcycleComponent } from './lifecycle/childcycle/childcycle.component
 import { ParentsearchComponent } from './componentcommunication/parentsearch/parentsearch.component';
 import { ChildsearchComponent } from './componentcommunication/childsearch/childsearch.component';
 import { ContactformComponent } from './Forms/contactform/contactform.component';
+import { TemplateformComponent } from './Forms/templateform/templateform.component';
 
 // import { LoginComponent } from './first_demo/login.component';
 // import { DemobindingComponent } from './demobinding/demobinding.component';
@@ -79,6 +80,7 @@ import { ContactformComponent } from './Forms/contactform/contactform.component'
     ParentsearchComponent,
     ChildsearchComponent,
     ContactformComponent,
+    TemplateformComponent,
   
     // LoginComponent,
     // DemobindingComponent,
