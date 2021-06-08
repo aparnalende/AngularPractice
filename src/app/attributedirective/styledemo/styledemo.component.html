@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="form-group">
+    <h1>Select Effects</h1>
+    <div>
+      <dl>
+        <dt>Choose Background color</dt>
+        <dd>
+          <select [(ngModel)]="bgcolor" class="form-control">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+          </select>
+        </dd>
+        <dt>Choose Text Color</dt>
+        <dd>
+          <select [(ngModel)]="forcolor" class="form-control">
+            <option value="yellow">Yellow</option>
+            <option value="pink">Pink</option>
+            <option value="navy">Navy</option>
+          </select>
+        </dd>
+        <dt>Text Alignment</dt>
+        <dd>
+          Left:<input
+            type="radio"
+            [(ngModel)]="align"
+            name="align"
+            value="left"
+          />
+          Center:<input
+            type="radio"
+            [(ngModel)]="align"
+            name="align"
+            value="center"
+          />
+          Right:<input
+            type="radio"
+            [(ngModel)]="align"
+            name="align"
+            value="right"
+          />
+        </dd>
+      </dl>
+      <button (click)="ApplyEffect()" class="btn btn-primary btn-block">
+        Apply Effects
+      </button>
+    </div>
+  </div>
+  <h1 [ngStyle]="styleObject">Sample Text</h1>
+</div>

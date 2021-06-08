@@ -1,0 +1,27 @@
+<p>pipedemotwo works!</p>
+<b>Date format</b>Date is{{ jd | date }}<br />
+<b>Date format</b>{{ jd | date: "dd/MM/yyyy" }}<br />
+<!-- <b>Full Date format</b>{{jd:|date:"fullDate"}}<br />
+<b>Short time format</b>{{ jd | date: "shortTime" }} -->
+<div>
+    <p>
+        For percent
+    </p>
+    <p>{{num1 | percent}}</p>
+    <p>{{num1 | percent:'2.2-5'}}</p>
+    <p>{{num1 | percent:'1.2-5'}}</p>
+    <p>{{num1 * num2|percent:'1.2-3'}}</p>
+</div>
+
+
+<div>
+    <h4>currency pipe</h4>
+    <b>Euro:  {{65|currency:'EUR':true}}</b><br>
+    <b>USD:  {{75|currency:'USD':true}}</b><br>
+    <b>Indian:  {{250|currency:'INR':true}}</b>
+</div>
+
+<div>
+    <p>{{12.638467|number:'3.2-5'}}</p>
+    <p>{{384.67846|number:'3.2-3'}}</p>
+</div>

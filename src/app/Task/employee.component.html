@@ -1,0 +1,31 @@
+<h2>Employee Details</h2>
+<div>
+    <label>Id: <input type="number" placeholder="Enter employee id" [(ngModel)]="id" /></label><br>
+    <label>Name: <input type="text" placeholder="Enter employee name" [(ngModel)]="name" /></label><br>
+    <label>Email: <input type="text" placeholder="Enter employee email" [(ngModel)]="email" /></label><br>
+    <label>Department: <input type="text" placeholder="Enter employee dept" [(ngModel)]="dept" /></label><br>
+    <button class="btn btn-primary" (click)="addEmployee()">Add Employee</button>
+</div>
+<div>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Department</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let item of employee">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.dept}}</td>
+         <!-- <td>
+            <button class="btn btn-danger" (click)="deleteEmployee(i)">Delete</button>
+        </td> -->
+    </tr>
+</tbody>
+</table>
+</div>

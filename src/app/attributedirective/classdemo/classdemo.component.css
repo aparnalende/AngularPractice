@@ -1,0 +1,16 @@
+.effects {
+  background-color: darkcyan;
+  color: white;
+  text-align: center;
+}
+
+.backEffects {
+  background-color: darkcyan;
+}
+.textEffects {
+  color: white;
+  text-align: center;
+}
+.borderEffects {
+  border: 2px dotted yellow;
+}

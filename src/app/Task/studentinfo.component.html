@@ -1,0 +1,65 @@
+<h2><u>Student Marksheet</u></h2>
+<div>
+  <form class="form-group">
+    <div class="form-group">
+      <label for="name">Enter Id:</label>
+      <input type="text" name="id" [(ngModel)]="sid" /><br />
+
+      <label for="name">Enter Name:</label>
+      <input type="text" name="sname" [(ngModel)]="sname" /><br />
+
+      <label for="social">Social Score:</label>
+      <input type="number" name="social" [(ngModel)]="social" /><br />
+
+      <label for="maths">Maths Score:</label>
+      <input type="number" name="maths" [(ngModel)]="maths" /><br />
+
+      <label for="science">Science Score:</label>
+      <input type="number" name="science" [(ngModel)]="science" /><br />
+
+      <label for="name">English Score:</label>
+      <input type="number" name="english" [(ngModel)]="english" /><br />
+
+      <label for="name">Hindi Score:</label>
+      <input type="number" name="hindi" [(ngModel)]="hindi" /><br />
+
+      <label for="name">IT Score:</label>
+      <input type="number" name="it" [(ngModel)]="it" /><br />
+
+      <button
+        class="btn btn-primary"
+        (click)="result()"
+      >
+        Result
+      </button>
+    </div>
+  </form>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Student Id</th>
+      <th>Name</th>
+      <th>Social</th>
+      <th>Maths</th>
+      <th>English</th>
+      <th>Hindi</th>
+      <th>IT</th>
+      <th>Total</th>
+      <th>Percentage</th>
+    </tr>
+    <tr>
+      <td>{{ sid }}</td>
+      <td>{{ sname }}</td>
+      <td>{{ social }}</td>
+      <td>{{ maths }}</td>
+      <td>{{ science }}</td>
+      <td>{{ english }}</td>
+      <td>{{ hindi }}</td>
+      <td>{{ it }}</td>
+      <td>{{ total }}</td>
+      <td>{{ percentage }}</td>
+    </tr>
+  </thead>
+</table>

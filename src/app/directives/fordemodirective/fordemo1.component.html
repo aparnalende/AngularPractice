@@ -1,0 +1,71 @@
+
+<h2>Employee Details</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Index</th>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Annual Salary</th>
+      <th>Date Of Birth</th>
+      <th>Full Time Status</th>
+      <th>IsFirst</th>
+      <th>IsLast</th>
+      <th>IsEven</th>
+      <th>IsOdd</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="
+        let employee of employees;
+        let i = index;
+        let isFirst = first;
+        let isLast = last;
+        let isEven = even;
+        let isOdd = odd;
+        trackBy: trackByEmpCode
+      "
+    >
+      <td>{{ i + 1 }}</td>
+      <td>{{employee.code}}</td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.gender}}</td>
+      <td>{{employee.annualSalary}}</td>
+      <td>{{employee.dateOfBirth}}</td>
+      <td>{{employee.fullTimeStatus}}</td>
+      <td>{{isFirst}}</td>
+      <td>{{isLast}}</td>
+      <td>{{isEven}}</td>
+      <td>{{isOdd}}</td>
+    </tr>
+  </tbody>
+
+  <h2>Full Time Employee</h2>
+  <tbody  *ngFor="
+  let employee of employees;
+  let i = index;
+  let isFirst = first;
+  let isLast = last;
+  let isEven = even;
+  let isOdd = odd;
+  trackBy: trackByEmpCode
+">
+  <tr
+      *ngIf="employee.fullTimeStatus"
+    >
+      <td>{{ i + 1 }}</td>
+      <td>{{employee.code}}</td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.gender}}</td>
+      <td>{{employee.annualSalary}}</td>
+      <td>{{employee.dateOfBirth}}</td>
+      <td>{{employee.fullTimeStatus}}</td>
+      <td>{{isFirst}}</td>
+      <td>{{isLast}}</td>
+      <td>{{isEven}}</td>
+      <td>{{isOdd}}</td>
+    </tr>
+  </tbody>
+</table>

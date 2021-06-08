@@ -1,0 +1,57 @@
+<h2>Product Data</h2>
+
+<table class="table table-striped">
+  <tr>
+    <td><h4>Product Id :</h4></td>
+    <td><input type="number" [(ngModel)]="id" /></td>
+  </tr>
+  <br>
+  <tr>
+    <td><h4>Category :</h4></td>
+    <td><input type="text" [(ngModel)]="category" /></td>
+  </tr>
+  <br>
+  <tr>
+    <td><h4>Product Name :</h4></td>
+    <td><input type="text" [(ngModel)]="name" /></td>
+  </tr>
+  <br>
+  <tr>
+    <td><h4>Price :</h4></td>
+    <td><input type="number" [(ngModel)]="price" /></td>
+  </tr>
+</table>
+<button (click)="AddData()" *ngIf="isAdded">Add Data</button>
+<button (click)="updateData()" *ngIf="isEdited">Update Data</button>
+<div *ngIf="products.length > 0">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th colspan="100%" style="background-color: lightcoral;">Product Data</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th>Action</th>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Products Category</th>
+        <th>Product Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of products; let i = index">
+        <td>
+          <button class="btn btn-danger"><a (click)="removeProduct(i)">Remove</a></button>
+        </td>
+        <td>
+          <button class="btn btn-success"><a (click)="editProduct(i)">Edit</a></button>
+        </td>
+        <td>{{ prod.id }}</td>
+        <td>{{ prod.name }}</td>
+        <td>{{ prod.category }}</td>
+        <td>{{ prod.price }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div></div>

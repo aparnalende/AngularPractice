@@ -1,0 +1,12 @@
+
+.panel {
+    padding: 5px;
+    width:200px;
+    margin-top: 20px;
+}
+ul {
+    list-style-type: none;
+}
+ul li {
+    margin-top: 10px;
+}

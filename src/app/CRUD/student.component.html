@@ -1,0 +1,66 @@
+<head>
+  Student Details
+</head>
+<div class="container" style="align-content: center">
+  <fieldset>
+    <label><h2>Enter Student Details</h2></label>
+    <div>
+      <label><h4>Roll No:</h4></label
+      ><input type="number" name="studroll" [(ngModel)]="studroll" />
+    </div>
+    <div>
+      <label><h4>Name:</h4></label
+      ><input type="text" name="studName" [(ngModel)]="studName" />
+    </div>
+    <div>
+      <label><h4>Course:</h4></label
+      ><input type="text" name="course" [(ngModel)]="course" />
+    </div>
+    <div>
+      <label><h4>Email:</h4></label
+      ><input type="email" name="email" [(ngModel)]="email" />
+    </div>
+  </fieldset>
+</div>
+<div>
+  <button (click)="AddStudent()" *ngIf="isAddStudent">Add Student</button>
+  <button (click)="updateStudent()" *ngIf="isEditStudent">
+    Update Student
+  </button>
+</div>
+
+<div *ngIf="student.length > 0">
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th colspan="100%">Student Data</th>
+      </tr>
+      <tr>
+        <th>Sr.No</th>
+        <th>Roll No.</th>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Email</th>
+        <th></th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let stud of student; let i = index">
+      <tr *ngIf="stud.studroll != 0">
+        <td>{{ i + 1 }}</td>
+        <td>{{ stud.studroll }}</td>
+        <td>{{ stud.studName }}</td>
+        <td>{{ stud.course }}</td>
+        <td>{{ stud.email }}</td>
+        <td>
+          <button class="btn btn-success" (click)="editStudent(i)">Edit</button>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="removeStudent(i)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

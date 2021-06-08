@@ -1,0 +1,9 @@
+<p>filterpanel works!</p>
+<div class="panel">
+    <ul>
+        <li><input [(ngModel)]="SelectedRadioValue" (change)="RadioButtonChanged()" value="All" name="filter" type="radio">All [{{AllCount}}]</li>
+        <li><input [(ngModel)]="SelectedRadioValue" (change)="RadioButtonChanged()" value="Electronics" name="filter" type="radio"> <span class="fa fa-tv"></span> Electronics [{{ElectronicsCount}}]</li>
+        <li><input [(ngModel)]="SelectedRadioValue" (change)="RadioButtonChanged()" value="Footwear" name="filter" type="radio"> <span class="fa fa-shoe-prints"></span>Footwear [{{FootwearCount}}] </li>
+    </ul>
+  </div>
+  

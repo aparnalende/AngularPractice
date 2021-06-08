@@ -1,0 +1,30 @@
+<fieldset width=100%>
+<legend>Enter Employee Detail</legend>
+<table class="table table-stripped">
+<tr>
+    <th>
+        <label> Employee Id : </label>
+        <input type="number" name="eid" [(ngModel)]="eid"/>
+    </th>
+</tr>
+<tr>
+    <th>
+        <label> Employee Name : </label>
+        <input type="text" name="ename" [(ngModel)]="ename" />
+    </th>
+</tr>
+<tr>
+    <th>
+        <label> Employee salary: </label>
+        <input type="number" name="esalary" [(ngModel)]="esalary"/>
+    </th>
+</tr>
+<tr>
+    <td><button (click)="calculateSalary()" class="btn btn-warning">Salary Slip</button></td>
+</tr>
+</table>
+</fieldset>
+<table class="table table-stripped">
+    <tr><th>Employee Id</th><th>Employee Name </th><th>Salary</th><th>Gross Salary</th></tr>
+    <tr><td>{{eid}}</td><td>{{ename}}</td><td>{{esalary}}</td><td>{{grossSal}}</td></tr>
+</table>

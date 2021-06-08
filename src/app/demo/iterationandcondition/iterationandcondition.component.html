@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="form-group">
+    <h2>Choose Category</h2>
+    <input
+      type="radio"
+      [(ngModel)]="selectedCategory"
+      value="All"
+      name="filter"
+    />All
+    <input
+      type="radio"
+      [(ngModel)]="selectedCategory"
+      value="Electronics"
+      name="filter"
+    />Electronics
+    <input
+      type="radio"
+      [(ngModel)]="selectedCategory"
+      value="Footwear"
+      name="filter"
+    />Footwear
+  </div>
+  <div class="form-group">
+    <table class="table table-hover">
+      <thead>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <ng-container
+            *ngIf="
+              selectedCategory == 'All' || selectedCategory == product.Category
+            "
+          >
+            <td>{{ product.Name }}</td>
+            <td>{{ product.Price }}</td>
+            <td>{{ product.Category }}</td>
+          </ng-container>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

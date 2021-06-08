@@ -1,0 +1,17 @@
+<p>brosereventdemo works!</p>
+<div class="container">
+<h2>Register User</h2>
+<div class="form-group">
+<label>User Name</label>
+<div>
+    <input (keyup)="verifyUsername()" [(ngModel)]="username" type="text" class="form-control"/>
+    <span [ngClass]="{'text-danger':isInvalid,'text-success':isValid}">{{msg}}</span>
+</div>
+<label>Password</label>
+<div>
+    <!-- <input (keyup)="verifyPassword($event)" type="text" class="form-control"/>
+    <span class="text-warning" *ngIf="warnDisplay"><span class="fa fa-exclamation-triangle"></span>Capital Letter Used</span> -->
+    <input type="text" class="form-control"/>
+</div>
+</div>
+</div>

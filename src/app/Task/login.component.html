@@ -1,0 +1,14 @@
+<fieldset>
+    <legend><h2>Login Here!!</h2></legend>
+    <form>
+        
+        <label><h2>Username : </h2></label>
+        <input type="email" name="username" [(ngModel)]="username"/><br>
+
+        <label><h2>Password : </h2></label>
+        <input type="password" name="password" [(ngModel)]="password"/><br>
+        <button class="btn btn-primary"(click)="validateUser()"> Login</button>
+       
+    </form>
+</fieldset>
+

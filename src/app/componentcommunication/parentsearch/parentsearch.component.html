@@ -1,0 +1,4 @@
+<p>parentsearch works!</p>
+<input type="text" name="ename" [(ngModel)]="ename"/>
+<app-childsearch [ename]="ename" (searchByName)="parentSearch($event)"></app-childsearch>
+{{fromChild}}

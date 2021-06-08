@@ -1,0 +1,105 @@
+<p>employee-crud-example works!</p>
+<!-- <form> -->
+<h2>Employee Details</h2>
+<div class="form-group">
+  <label for="id">Id</label>
+  <input
+    type="number"
+    class="form-control  form-control-sm"
+    placeholder="Enter employee id"
+    [(ngModel)]="id"
+  />
+</div>
+<div class="form-group">
+  <label for="employeename">Employee Name</label>
+  <input
+    type="text"
+    class="form-control  form-control-sm"
+    placeholder="Enter Employee Name"
+    [(ngModel)]="ename"
+  />
+</div>
+<div class="form-group">
+  <label for="department">Department</label>
+  <input
+    type="text"
+    class="form-control  form-control-sm"
+    placeholder="Enter Employee Department"
+    [(ngModel)]="dept"
+  />
+</div>
+<div class="form-group">
+  <label for="salary"> Salary</label>
+  <input
+    type="number"
+    class="form-control  form-control-sm"
+    placeholder="Enter Employee Salary"
+    [(ngModel)]="salary"
+  />
+</div>
+<div class="form-group">
+  <label for="address">Address</label>
+  <input
+    type="text"
+    class="form-control  form-control-sm"
+    placeholder="Enter Employee Address"
+    [(ngModel)]="addr"
+  />
+</div>
+<button class="btn btn-primary" (click)="AddEmployee()" *ngIf="isAdded">
+  Add Employee
+</button>
+<button class="btn btn-warning" (click)="UpdateEmployee()" *ngIf="isEdited">
+  Update Employee
+</button>
+<!-- </form> -->
+
+<div>
+  <input [(ngModel)]="searchText" placeholder="search here using emp name" />
+  <div *ngIf="employees.length > 0">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+          <th>Employee Details</th>
+        </tr>
+        <tr>
+          <th>Sr. No.</th>
+          <th>Employee Id</th>
+          <th>Name</th>
+          <th>Department.</th>
+          <th>Salary</th>
+          <th>Address</th>
+          <th></th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let employee of employees | employeepipexample: searchText;
+            let i = index
+          "
+        >
+          <td>{{ i + 1 }}</td>
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.ename }}</td>
+          <td>{{ employee.dept }}</td>
+          <td>{{ employee.salary }}</td>
+          <td>{{ employee.addr }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="removeEmployee(i)">
+              Edit
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-success" (click)="editEmployee(i)">
+              Edit
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<p>pipedemo works!</p>
+<div class="container">
+  <div *ngFor="let item of product | keyvalue">
+    {{ item.key }}:{{ item.value }}
+  </div>
+  <ul>
+    <li *ngFor="let item of products | keyvalue">
+      [{{ item.key }}]-{{ item.value }}
+    </li>
+  </ul>
+</div>
+
+<div class="container">
+   Name : {{productName}} <br>
+   City : {{city}} <br>
+   Status: {{city | i18nSelect:statusMessage}}
+</div>

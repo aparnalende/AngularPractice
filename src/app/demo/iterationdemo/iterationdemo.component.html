@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Products Catalog</h2>
+  <div class="card-deck">
+    <div class="card" *ngFor="let product of products">
+      <div class="card-header bg-danger text-white">
+        <h2 class="card-title">{{ product.Name }}</h2>
+      </div>
+      <div class="card-body">
+        <img src="{{ product.Photo }}" />
+      </div>
+      <div class="card-footer">
+        <button
+          class="btn btn-danger text-white"
+          (click)="LikesCounter(product)"
+        >
+          <span class="badge badge-light">{{ product.Likes }}</span
+          >&nbsp;<span class="fa fa-thumbs-up"></span>
+        </button>
+        <button
+          class="btn btn-danger text-white"
+          (click)="DislikesCounter(product)"
+        >
+          <span class="badge badge-light">{{ product.Dislikes }}</span
+          >&nbsp;<span class="fa fa-thumbs-down"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

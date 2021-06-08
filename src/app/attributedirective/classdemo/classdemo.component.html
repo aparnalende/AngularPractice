@@ -1,0 +1,26 @@
+<!-- string reference -->
+<div class="container">
+  <h1 [ngClass]="'effects'">String Reference</h1>
+</div>
+
+<!-- array reference -->
+<div class="container">
+  <h1 [ngClass]="['backEffects', 'textEffects', 'borderEffects']">
+    Array Reference
+  </h1>
+</div>
+
+<!-- object reference -->
+<div class="container">
+  <div class="form-group">
+    <h2>Choose Effects</h2>
+    <ul class="list-unstyled">
+      <li><input [(ngModel)]="IsBackgroundSet" type="checkbox" /> Effect</li>
+      <li><input [(ngModel)]="IsTextSet" type="checkbox" /> Text Effects</li>
+      <li>
+        <input [(ngModel)]="IsBorderSet" type="checkbox" /> Border Effects
+      </li>
+    </ul>
+  </div>
+  <h1 [ngClass]="{backEffects:IsBackgroundSet, textEffects:IsTextSet, borderEffects:IsBorderSet}">Object Reference</h1>
+</div>

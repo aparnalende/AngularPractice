@@ -1,0 +1,13 @@
+<p>parentcycle works!</p>
+<div class="container bg-dark text-white" style="height: 200px">
+  <h2>Parent</h2>
+  <input
+    type="text"
+    [(ngModel)]="username"
+    class="form-control"
+    placeholder="enter username"
+  />
+  <div style="margin-top: 30px">
+    <app-childcycle [username]="username"></app-childcycle>
+  </div>
+</div>

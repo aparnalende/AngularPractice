@@ -1,0 +1,9 @@
+.form-group {
+    width: 300px;
+    margin:auto;
+    border:2px solid darkcyan;
+    box-shadow: 2px 4px 4px darkcyan;
+    margin-bottom: 20px;
+    height: 350px;
+    padding: 20px;
+}
