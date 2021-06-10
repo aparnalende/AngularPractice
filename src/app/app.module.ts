@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmployeeCrudExampleComponent } from './CRUD/employee-crud-example/employee-crud-example.component';
 import { PipedemoComponent } from './pipe/pipedemo/pipedemo.component';
 import { PipedemotwoComponent } from './pipe/pipedemotwo/pipedemotwo.component';
@@ -26,7 +26,14 @@ import { ParentsearchComponent } from './componentcommunication/parentsearch/par
 import { ChildsearchComponent } from './componentcommunication/childsearch/childsearch.component';
 import { ContactformComponent } from './Forms/contactform/contactform.component';
 import { TemplateformComponent } from './Forms/templateform/templateform.component';
-import { InputvalidationComponent } from './Forms/inputvalidation/inputvalidation.component';
+import { ValidateformdemoComponent } from './Forms/validateformdemo/validateformdemo.component';
+import { LifecyclemethodsComponent } from './lifecycle/lifecyclemethods/lifecyclemethods.component';
+import { ReactiveformComponent } from './Forms/reactiveform/reactiveform.component';
+import { ServicedemoComponent } from './services/servicedemo/servicedemo.component';
+import { EmployeecrudservicedemoComponent } from './services/employeecrudservicedemo/employeecrudservicedemo.component';
+import { RegistrationbuilderComponent } from './Forms/registrationbuilder/registrationbuilder.component';
+// import { ValidationdemoComponent } from './Forms/validationdemo/validationdemo.component';
+// import { InputvalidationComponent } from './Forms/inputvalidation/inputvalidation.component';
 
 // import { LoginComponent } from './first_demo/login.component';
 // import { DemobindingComponent } from './demobinding/demobinding.component';
@@ -82,7 +89,14 @@ import { InputvalidationComponent } from './Forms/inputvalidation/inputvalidatio
     ChildsearchComponent,
     ContactformComponent,
     TemplateformComponent,
-    InputvalidationComponent,
+    ValidateformdemoComponent,
+    LifecyclemethodsComponent,
+    ReactiveformComponent,
+    ServicedemoComponent,
+    EmployeecrudservicedemoComponent,
+    RegistrationbuilderComponent,
+    // ValidationdemoComponent,
+    // InputvalidationComponent,
   
     // LoginComponent,
     // DemobindingComponent,
@@ -113,7 +127,8 @@ import { InputvalidationComponent } from './Forms/inputvalidation/inputvalidatio
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

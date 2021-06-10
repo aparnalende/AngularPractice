@@ -1,0 +1,109 @@
+<p>employeecrudservicedemo works!</p>
+<h2 style="color: firebrick"><u>Enter Contact Details:</u></h2>
+<form
+  #employeeForm="ngForm" (ngSubmit)="addEmployee(employeeForm.value)"
+  
+  class="row gy-2 gx-3 align-items-center"
+  style="margin-left: 30px; margin-right: 30px"
+>
+  <div class="col-md-9">
+    <label for="eid">Employee id :</label>
+    <input
+      type="text"
+      class="form-control"
+      name="eid"
+      [(ngModel)]="Employee.eid"
+    
+    />
+  </div>
+  <div class="col-md-9">
+    <label for="firstname">First Name:</label>
+    <input
+      type="text"
+      class="form-control"
+      name="firstname"
+      [(ngModel)]="Employee.firstname"
+    
+    />
+  </div>
+  <div class="col-md-9">
+    <label for="lastname">Last Name:</label>
+    <input
+      type="text"
+      class="form-control"
+      name="lastname"
+      [(ngModel)]="Employee.lastname"
+     
+    />
+  </div>
+  <div class="col-md-9">
+    <label for="department">Department:</label>
+    <input
+      type="text"
+      class="form-control"
+      name="department"
+      [(ngModel)]="Employee.department"
+     
+    />
+  </div>
+  <div class="col-md-9">
+    <label for="salary">Salary</label>
+    <input
+      type="number"
+      class="form-control"
+      name="salary"
+      [(ngModel)]="Employee.salary"
+     
+    />
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Submit Details</button>
+    <!-- <button class="btn btn-warning" type="submit" (ngSubmit)="UpdateEmployee(employeeForm.value)" *ngIf="isEdited">
+      Update Employee
+    </button> -->
+  </div>
+</form>
+
+<div>
+  <div *ngIf="employee.length > 0">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+          <th>Employee Details</th>
+        </tr>
+        <tr>
+          <th>Sr. No.</th>
+          <th>Employee Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Department.</th>
+          <th>Salary</th>
+          <th></th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employe of employee; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ employe.eid }}</td>
+          <td>{{ employe.firstname }}</td>
+          <td>{{ employe.lastname }}</td>
+          <td>{{ employe.department }}</td>
+          <td>{{ employe.salary }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="removeEmployee(employe)">
+              Delete
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-success" (click)="editEmployee(employe)">
+              Edit
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
