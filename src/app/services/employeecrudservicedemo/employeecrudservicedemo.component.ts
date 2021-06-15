@@ -49,7 +49,6 @@ export class EmployeecrudservicedemoComponent implements OnInit {
   };
 
   UpdateEmployee = (updatedEmployee: any) => {
-    // this.empData.UpdateEmployee();
     console.log('In onupdate method');
     console.log(updatedEmployee);
   };

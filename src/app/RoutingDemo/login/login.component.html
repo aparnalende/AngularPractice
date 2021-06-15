@@ -1,0 +1,14 @@
+<div class="container">
+  <form class="form-group">
+    <div class="form-control">Enter Username : <input type="text" #u1 /></div>
+    <div class="form-control">
+      Enter password : <input type="password" #p2 />
+    </div>
+    <div>
+      <button class="btn btn-primary" (click)="check(u1.value, p2.value)">
+        Login
+      </button>
+    </div>
+  </form>
+</div>
+<span>{{ msg }}</span>

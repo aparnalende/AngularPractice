@@ -1,0 +1,18 @@
+<h1>Product Details Page</h1>
+
+<ul>
+  <li><h4>Id : {{prolist.id}}</h4></li>
+  <li><h4>Name : {{prolist.name}}</h4></li>
+  <li><h4>Description: {{prolist.description}}</h4></li>
+</ul>
+<router-outlet></router-outlet>
+
+<!-- <p>
+  <button class="btn btn-default" (click)="goBack()">
+    Back Using Location Service
+  </button>
+</p> -->
+
+<p>
+  <button class='btn btn-default' (click)="onBack()">Back Using Router.navigate </button>
+</p>

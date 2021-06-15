@@ -1,0 +1,29 @@
+<p>registerservice works!</p>
+<div class="registerForm">
+  <h2>{{ title }}</h2>
+  <dl>
+    <dt>User Name</dt>
+    <dd><input type="text" /></dd>
+    <dt>Password</dt>
+    <dd><input type="password" /></dd>
+    <dt>Email</dt>
+    <dd><input type="email" /></dd>
+    <dt>Verify</dt><br>
+    <dd>
+      <span
+        style="
+          width: 100px;
+          height: 50px;
+          border: 1px solid darkcyan;
+          padding: 5px;
+        "
+      >
+        {{ code }}
+      </span>
+    </dd><br>
+    <dd>
+      <button (click)="NewCode()" class="btn brn-primary">New Code</button>
+    </dd>
+  </dl>
+  <button>Register</button>
+</div>

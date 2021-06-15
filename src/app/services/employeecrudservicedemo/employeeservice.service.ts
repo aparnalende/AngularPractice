@@ -30,7 +30,7 @@ export class EmployeeserviceService {
     this.employeeData.splice(index, 1);
   };
 
-  public editEmployee = (i: number) => {
+  public editEmployee = (i: any) => {
     this.isSelectedIndex = i;
     this.eid = this.employeeData[i].eid;
     this.firstname = this.employeeData[i].firstname;

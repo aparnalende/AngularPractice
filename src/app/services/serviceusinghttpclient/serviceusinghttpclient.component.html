@@ -1,0 +1,18 @@
+<p>serviceusinghttpclient works!</p>
+<button (click)="getUsersFromService()" class="btn btn-primary">Call Service</button>
+<table class="table table-stripped" style="margin-left: 50px;margin-right: 50px;">
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>LOGIN</th>
+        <th>AVATAR</th>
+        <th>USER HTML</th>
+    </tr>
+</thead>
+<tr *ngFor="let usr of data">
+    <td>{{usr.id}}</td>
+    <td>{{usr.login}}</td>
+    <td><img src="usr.avatar_url" [src]="usr.avatar_url" width="100" height="100"></td>
+    <td>{{usr.html_url}}</td>
+</tr>
+</table>

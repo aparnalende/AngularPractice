@@ -1,0 +1,85 @@
+<p>customvalidation works!</p>
+<div class="container-fluid">
+  <form #frmRegister="ngForm">
+    <h2>Register User</h2>
+    <div class="form-group">
+      <label>User Name</label>
+      <div>
+        <input
+          type="text"
+          name="txtName"
+          ngModel
+          #txtName="ngModel"
+          class="form-control"
+          required
+        />
+        <span *ngIf="txtName.touched && txtName.invalid" class="text-danger"
+          >Name required</span
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Mobile</label>
+      <div>
+        <input
+          type="text"
+          name="txtMobile"
+          ngModel
+          #txtMobile="ngModel"
+          class="form-control"
+          required
+          pattern="\+91[0-9]{10}"
+        />
+        <div *ngIf="txtMobile.touched && txtMobile.invalid">
+          <span *ngIf="txtMobile.errors?.required" class="text-danger"
+            >Mobile Required</span
+          >
+          <span *ngIf="txtMobile.errors?.pattern" class="text-danger"
+            >Invalid Mobile</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Select City</label>
+      <div>
+        <select
+          (change)="CityChanged(lstCities.value)"
+          name="lstCities"
+          #lstCities="ngModel"
+          ngModel
+          class="form-control"
+        >
+          <option value="nocity">Select Your City</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Pune">Pune</option>
+          <option value="Mumbai">Mumbai</option>
+        </select>
+        <span *ngIf="showCityError" class="text-danger"
+          >Please Select a City</span
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Enter Even Number</label>
+      <div>
+        <input
+          (blur)="VerifyEvenNumber(txtEven.value)"
+          type="text"
+          required
+          name="txtEven"
+          ngModel
+          #txtEven="ngModel"
+          class="form-control"
+        />
+        <span *ngIf="showEvenError" class="text-danger"
+          >Not an Even Number</span
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary btn-block">Submit</button>
+    </div>
+  </form>
+</div>

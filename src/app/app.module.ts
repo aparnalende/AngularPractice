@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -32,6 +33,32 @@ import { ReactiveformComponent } from './Forms/reactiveform/reactiveform.compone
 import { ServicedemoComponent } from './services/servicedemo/servicedemo.component';
 import { EmployeecrudservicedemoComponent } from './services/employeecrudservicedemo/employeecrudservicedemo.component';
 import { RegistrationbuilderComponent } from './Forms/registrationbuilder/registrationbuilder.component';
+import { RegisterserviceComponent } from './services/registerservice/registerservice.component';
+import { CaptchaService } from './services/registerservice/captcha.service';
+import { TemplateForComponentComponent } from './Forms/template-for-component/template-for-component.component';
+import { CustomvalidationComponent } from './Forms/customvalidation/customvalidation.component';
+import { Observabledemo1Component } from './services/observabledemo1/observabledemo1.component';
+import { HttpclientdemoComponent } from './services/httpclientdemo/httpclientdemo.component';
+import { ServiceusinghttpclientComponent } from './services/serviceusinghttpclient/serviceusinghttpclient.component';
+import { FormArrayDemoComponent } from './Forms/form-array-demo/form-array-demo.component';
+// import { StudentComponent } from './Student_Crud_Api/student/student.component';
+import { StudentService } from './Student_Crud_Api/student.service';
+import { HomeComponent } from './RoutingDemo/home/home.component';
+import { AboutComponent } from './RoutingDemo/about/about.component';
+import { ContactComponent } from './RoutingDemo/contact/contact.component';
+import { NotfoundComponent } from './RoutingDemo/notfound/notfound.component';
+import { AbouthomeComponent } from './RoutingDemo/abouthome/abouthome.component';
+import { AboutItemComponent } from './RoutingDemo/about-item/about-item.component';
+import { ProductComponent } from './RoutingDemo/product/product.component';
+import { ProductdetailsComponent } from './RoutingDemo/productdetails/productdetails.component';
+import { UserapicompComponent } from './User_Crud_Boot_Api/userapicomp/userapicomp.component';
+import { UserFormComponent } from './User_Crud_Boot_Api/user-form/user-form.component';
+import { AuthguardGuard } from './authguard.guard';
+import { LoginComponent } from './RoutingDemo/login/login.component';
+import { LogoutComponent } from './RoutingDemo/logout/logout.component';
+import { DashBoardComponent } from './RoutingDemo/dash-board/dash-board.component';
+import { FormarraydemoComponent } from './Forms/formarraydemo/formarraydemo.component';
+import { ArrayformComponent } from './Forms/arrayform/arrayform.component';
 // import { ValidationdemoComponent } from './Forms/validationdemo/validationdemo.component';
 // import { InputvalidationComponent } from './Forms/inputvalidation/inputvalidation.component';
 
@@ -95,6 +122,29 @@ import { RegistrationbuilderComponent } from './Forms/registrationbuilder/regist
     ServicedemoComponent,
     EmployeecrudservicedemoComponent,
     RegistrationbuilderComponent,
+    RegisterserviceComponent,
+    TemplateForComponentComponent,
+    CustomvalidationComponent,
+    Observabledemo1Component,
+    HttpclientdemoComponent,
+    ServiceusinghttpclientComponent,
+    FormArrayDemoComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
+    NotfoundComponent,
+    AbouthomeComponent,
+    AboutItemComponent,
+    ProductComponent,
+    ProductdetailsComponent,
+    UserapicompComponent,
+    UserFormComponent,
+    LoginComponent,
+    LogoutComponent,
+    DashBoardComponent,
+    FormarraydemoComponent,
+    ArrayformComponent,
+    // StudentComponent,
     // ValidationdemoComponent,
     // InputvalidationComponent,
   
@@ -128,9 +178,11 @@ import { RegistrationbuilderComponent } from './Forms/registrationbuilder/regist
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    NgbModule
   ],
-  providers: [],
+  providers: [CaptchaService,StudentService,AuthguardGuard],
   bootstrap: [AppComponent]
 
 })
