@@ -1,0 +1,10 @@
+<form [formGroup]="frameworkForm" (ngSubmit)="onSubmit()">
+  <select formControlName="name">
+    <option value="">Choose option</option>
+    <option *ngFor="let f of framework">{{ f }}</option>
+  </select>
+  <div class="error-block" *ngIf="submitted && handlerError('name', 'equired')">
+    You must provide value
+  </div>
+  <button>Submit</button>
+</form>

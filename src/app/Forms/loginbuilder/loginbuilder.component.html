@@ -1,0 +1,25 @@
+<form [formGroup]="logForm" (ngSubmit)="submitForm()">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      formControlName="email"
+      placeholder="email"
+      class="form-control form-control-sm"
+      type="text"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      formControlName="password"
+      class="form-control form-control-sm"
+      type="password"
+      placeholder="password"
+    />
+  </div>
+
+  <button class="btn btn-lg btn-primary pull-xs-right" type="submit">
+    Submit
+  </button>
+</form>

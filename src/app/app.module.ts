@@ -57,8 +57,13 @@ import { AuthguardGuard } from './authguard.guard';
 import { LoginComponent } from './RoutingDemo/login/login.component';
 import { LogoutComponent } from './RoutingDemo/logout/logout.component';
 import { DashBoardComponent } from './RoutingDemo/dash-board/dash-board.component';
-import { FormarraydemoComponent } from './Forms/formarraydemo/formarraydemo.component';
-import { ArrayformComponent } from './Forms/arrayform/arrayform.component';
+import { FormarrayComponent } from './Forms/formarray/formarray.component';
+import { UloadFilesComponent } from './components/uload-files/uload-files.component';
+import { DynamicformarrayComponent } from './Forms/dynamicformarray/dynamicformarray.component';
+import { SelectdemoComponent } from './Forms/selectdemo/selectdemo.component';
+import { LoginbuilderComponent } from './Forms/loginbuilder/loginbuilder.component';
+// import { FormarraydemoComponent } from './Forms/formarraydemo/formarraydemo.component';
+// import { ArrayformComponent } from './Forms/arrayform/arrayform.component';
 // import { ValidationdemoComponent } from './Forms/validationdemo/validationdemo.component';
 // import { InputvalidationComponent } from './Forms/inputvalidation/inputvalidation.component';
 
@@ -142,8 +147,13 @@ import { ArrayformComponent } from './Forms/arrayform/arrayform.component';
     LoginComponent,
     LogoutComponent,
     DashBoardComponent,
-    FormarraydemoComponent,
-    ArrayformComponent,
+    FormarrayComponent,
+    UloadFilesComponent,
+    DynamicformarrayComponent,
+    SelectdemoComponent,
+    LoginbuilderComponent,
+    // FormarraydemoComponent,
+    // ArrayformComponent,
     // StudentComponent,
     // ValidationdemoComponent,
     // InputvalidationComponent,
